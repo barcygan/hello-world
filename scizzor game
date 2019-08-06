@@ -8,11 +8,11 @@ while True:
     #Create a tuple from results
     choice = (player1,player2)
     
-    #Defining winnig choices for player1 and player2
+    #Defining winnig choices list of tuples for player1 and player2
     win_player_1=[('p','k'),('k','n'), ('n','p')]
     win_player_2=[('k','p'),('n','k'), ('p','n')]
     
-    #Definig draw 
+    #Definig draw situation list of tuples from player input
     draw=[('k','k'), ('p','p'), ('n','n')]
     
     #Printing player's choice to the board
@@ -20,11 +20,11 @@ while True:
     
     #Checking the winner
     if choice in win_player_1:
-        print('Wygrana gracza 1')
+        print('Player 1 WINS')
     elif choice in win_player_2:
-        print('Wygrana gracza 2')
+        print('Player 2 WIND')
     elif choice in draw:
-        print('Remis, wybierz ponownie')
+        print('DRAW, make Your choice again')
     else:
-        print('Wybierz poprawną wartość')
+        print('INVALID INPUT')
         continue
