@@ -1,0 +1,21 @@
+import getpass
+
+while True:
+    player1=getpass.getpass('Please set the number: n. Nozyczki p. Papier k. Kamien. Twój wybór to : ').lower()
+    player2=getpass.getpass('Please set the number: n. Nozyczki p. Papier k. Kamien. Twój wybór to : ').lower()
+    
+    choice = (player1,player2)
+    win_player_1=[('p','k'),('k','n'), ('n','p')]
+    win_player_2=[('k','p'),('n','k'), ('p','n')]
+    draw=[('k','k'), ('p','p'), ('n','n')]
+    print(choice)
+    
+    if choice in win_player_1:
+        print('Wygrana gracza 1')
+    elif choice in win_player_2:
+        print('Wygrana gracza 2')
+    elif choice in draw:
+        print('Remis, wybierz ponownie')
+    else:
+        print('Wybierz poprawną wartość')
+        continue
