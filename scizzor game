@@ -1,15 +1,24 @@
 import getpass
 
 while True:
+    #Each player choose an item hidden by getpass
     player1=getpass.getpass('Please set the number: n. Nozyczki p. Papier k. Kamien. Twój wybór to : ').lower()
     player2=getpass.getpass('Please set the number: n. Nozyczki p. Papier k. Kamien. Twój wybór to : ').lower()
     
+    #Create a tuple from results
     choice = (player1,player2)
+    
+    #Defining winnig choices for player1 and player2
     win_player_1=[('p','k'),('k','n'), ('n','p')]
     win_player_2=[('k','p'),('n','k'), ('p','n')]
+    
+    #Definig draw 
     draw=[('k','k'), ('p','p'), ('n','n')]
+    
+    #Printing player's choice to the board
     print(choice)
     
+    #Checking the winner
     if choice in win_player_1:
         print('Wygrana gracza 1')
     elif choice in win_player_2:
